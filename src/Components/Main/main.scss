@@ -1,12 +1,12 @@
 $button-a-color: #46139f;
 $button-b-color: #ff7f50;
+$button-c-color: #fff;
 
-#main-component,
 #main-component > div{
   height: 100vh;
 }
 
-button.test-btn:first-of-type{
+button.test-btn{
   margin-right: 1rem;
 }
 
@@ -26,4 +26,18 @@ button.test-btn.btn-b:active{
   background-color: $button-b-color !important;
   box-shadow: none !important;
   outline:none !important;
+}
+
+button.test-btn.btn-c,
+button.test-btn.btn-c:focus,
+button.test-btn.btn-c:active{
+  border-color: $button-a-color !important;
+  color: $button-a-color !important;
+  background-color: $button-c-color !important;
+  box-shadow: none !important;
+  outline:none !important;
+}
+
+.modal-footer {
+  justify-content: flex-start;
 }

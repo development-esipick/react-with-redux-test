@@ -1,16 +1,21 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
+import Button from "../Buttons/Button";
 
 class Main extends React.Component{
     render(){
+        const { history } = this.props;
         return (
             <div className="container" id={`main-component`}>
                 <div className="row justify-content-center align-items-center">
-                    <button type="button" className="btn btn-primary test-btn btn-a">Button A</button>
-                    <button type="button" className="btn btn-secondary test-btn btn-b">Button B</button>
+                    <Button btnType="a" label="Button A" callMeOnClick = {() => history.push("/a")} />
+                    <Button btnType="b" label="Button B" callMeOnClick = {() => history.push("/b")} />
                 </div>
             </div>
         );
     }
 }
 
-export default Main;
+export default function(props) {
+    return <Main {...props} history={useHistory()} />;
+}
