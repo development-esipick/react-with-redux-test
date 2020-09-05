@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './index.scss'
-import Main from "./Components/Main/main";
-import ContactPortal from "./ContactListingsPortal"
+import Main from "./Components/Main/Main";
+import ContactPortal from "./Components/ContactModals/ContactListingsPortal"
 
 ReactDOM.render(
     <React.StrictMode>

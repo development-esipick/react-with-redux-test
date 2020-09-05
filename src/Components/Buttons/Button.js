@@ -12,7 +12,7 @@ export default class Button extends React.Component{
     }
 
     render(){
-        return (<button type="button" className={`btn btn-primary test-btn btn-${this.props.btnType.toLowerCase()}`} onClick={this.handleClick}>Button {this.props.btnType.toUpperCase()}</button>);
+        return (<button type="button" className={`btn btn-primary test-btn btn-${this.props.btnType.toLowerCase()}`} onClick={this.handleClick} disabled={this.props.disableMe}>{this.props.label.toUpperCase()}</button>);
     }
 
 }
