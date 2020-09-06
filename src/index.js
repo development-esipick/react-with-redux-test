@@ -7,8 +7,8 @@ import ReactDOM from 'react-dom';
 import thunk from 'redux-thunk'
 import React from 'react';
 
-import ContactListingsPortal from "./partials/contactModals/contactListingsPortal"
-import Main from "./partials/main/main";
+import ContactListingsPortal from "./components/contactModals/contactListingsPortal"
+import Main from "./components/main/main";
 import './index.scss'
 
 const store = createStore(AllReducers, composeWithDevTools(applyMiddleware(thunk)));
