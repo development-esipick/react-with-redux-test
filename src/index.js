@@ -7,8 +7,8 @@ import ReactDOM from 'react-dom';
 import thunk from 'redux-thunk'
 import React from 'react';
 
-import ContactListingsPortal from "./components/contactModals/contactListingsPortal"
-import Main from "./components/main/main";
+import ContactListingsPortal from "./componenets/contactModals/contactListingsPortal"
+import Main from "./componenets/main/main";
 import './index.scss'
 
 const store = createStore(AllReducers, composeWithDevTools(applyMiddleware(thunk)));
@@ -32,7 +32,6 @@ ReactDOM.render(
             </div>
             </Router>
         </Provider>
-    </React.StrictMode>
-    ,
+    </React.StrictMode>,
     document.getElementById('root')
 );

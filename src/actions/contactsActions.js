@@ -40,11 +40,13 @@ export const setContactIds = (ids) => {
     }
 }
 
-export const setName = (name) => {
-    return {
+export const setName = (name, callback) => dispatch => {
+    dispatch({
         type: 'SET_NAME',
         payload: {name: name}
-    }
+    })
+    if(callback)
+        setTimeout(() => callback(), 0);
 }
 
 export const setContactDetail = (contactDetail) => dispatch => {
