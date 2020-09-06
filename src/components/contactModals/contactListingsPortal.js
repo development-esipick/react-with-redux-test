@@ -13,11 +13,6 @@ const portalRoot = document.getElementById('contacts-listing-portal-root');
 
 class contactListingsPortal extends Component {
 
-    constructor(props) {
-        super(props);
-        this.props.setName(this.props.location.pathname.toUpperCase())
-    }
-
     componentDidMount() {
         this.unlisten = this.props.history.listen((location) => {
             this.props.resetToInitialState()
@@ -28,12 +23,9 @@ class contactListingsPortal extends Component {
         this.observer = new IntersectionObserver(this.handleObserver.bind(this),{}).observe(this.loadingRef);
     }
 
-    setNameFromStateAndCallApi = (pathName) => {
-        this.props.setName(pathName[1].toUpperCase())
-        this.getContactsFromApi()
-    }
+    setNameFromStateAndCallApi = (pathName) => this.props.setName(pathName[1].toUpperCase(), () => this.getContactsFromApi())
 
-    handleObserver(entities, observer) {
+    handleObserver = (entities) => {
         const y = entities[0].boundingClientRect.y;
         if (this.props.prevY > y && this.props.totalContacts > this.props.contactIds.length)
             this.getContactsFromApi(true);
