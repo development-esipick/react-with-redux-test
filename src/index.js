@@ -32,7 +32,6 @@ ReactDOM.render(
             </div>
             </Router>
         </Provider>
-    </React.StrictMode>
-    ,
+    </React.StrictMode>,
     document.getElementById('root')
 );
