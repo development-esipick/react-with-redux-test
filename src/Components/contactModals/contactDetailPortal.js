@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import ContactItem from "./ContactItem";
+import ContactItem from "../presentational/contactItem";
 
 const portalRoot = document.getElementById('contact-detail-portal-root');
 
-export class ContactDetailPortal extends Component {
+export class contactDetailPortal extends Component {
 
     constructor(props) {
         super(props);
@@ -72,4 +72,4 @@ export class ContactDetailPortal extends Component {
     }
 }
 
-export default ContactDetailPortal;
+export default contactDetailPortal;

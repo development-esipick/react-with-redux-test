@@ -1,19 +1,10 @@
 import React from 'react';
 
-class ContactItem extends React.Component{
-
-    constructor(props) {
-        super(props);
-        this.handleContactClick = this.handleContactClick.bind(this);
-    }
-
-    handleContactClick = () => {
-        this.props.callContactClick()
-    }
+class contactItem extends React.Component{
 
     render(){
         return (
-            <li key={this.props.contact.id} className="list-group-item" onClick = {() => this.handleContactClick(this.props.contact)}>
+            <li key={this.props.contact.id} className="list-group-item" onClick = {() => this.props.callContactClick()}>
                 <p className={`contact-label-value`}>
                     <label className={`contact-label`}>ID: </label> <span className={`contact-value`}>{this.props.contact.id}</span>
                 </p>
@@ -30,4 +21,4 @@ class ContactItem extends React.Component{
         );
     }
 }
-export default ContactItem;
+export default contactItem;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
-import Button from "../Buttons/Button";
+import Button from "../buttons/button";
 
 class Main extends React.Component{
 
